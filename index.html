@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이재원 — Portfolio</title>
+<meta name="description" content="이재원 포트폴리오. 슬라이딩 퍼즐 박스 — 설계부터 3D 프린팅, 조립까지.">
+<meta property="og:title" content="이재원 — Portfolio">
+<meta property="og:description" content="슬라이딩 퍼즐 박스 — 설계부터 3D 프린팅, 조립까지.">
+<meta property="og:image" content="assets/photo.jpg">
+<style>
+  :root { --fg:#111; --mute:#777; --line:#e6e6e6; --bg:#fff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { -webkit-text-size-adjust:100%; }
+  body {
+    background:var(--bg); color:var(--fg);
+    font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 28px; }
+  header { padding:28px 0; display:flex; justify-content:space-between; align-items:baseline; }
+  header .name { font-weight:600; font-size:15px; letter-spacing:-.01em; }
+  header .tag { font-size:13px; color:var(--mute); }
+
+  .intro { padding:88px 0 64px; }
+  .intro h1 { font-size:clamp(34px,6vw,60px); font-weight:600; letter-spacing:-.03em; line-height:1.15; }
+  .intro p { margin-top:20px; color:var(--mute); font-size:16px; max-width:34em; }
+
+  .meta { display:flex; flex-wrap:wrap; gap:8px 40px; padding:20px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font-size:13px; }
+  .meta dt { color:var(--mute); display:inline; margin-right:10px; }
+  .meta dd { display:inline; }
+
+  figure { margin:0; }
+  figcaption { display:flex; gap:14px; margin-top:12px; font-size:13px; color:var(--mute); }
+  figcaption b { font-weight:500; color:var(--fg); }
+
+  .hero { margin-top:56px; }
+  .hero img { width:100%; display:block; aspect-ratio:4/3; object-fit:cover; background:#f2f2f2; }
+
+  .row { display:grid; grid-template-columns:1fr 330px; gap:28px; margin-top:28px; align-items:start; }
+  .row video { width:100%; display:block; background:#f2f2f2; }
+  .cad video { aspect-ratio:16/9; object-fit:cover; }
+  .play video { aspect-ratio:9/16; object-fit:cover; }
+
+  footer { margin-top:96px; padding:28px 0 48px; border-top:1px solid var(--line); display:flex; justify-content:space-between; font-size:13px; color:var(--mute); }
+
+  @media (max-width:760px) {
+    .wrap { padding:0 18px; }
+    .intro { padding:56px 0 40px; }
+    .row { grid-template-columns:1fr; gap:36px; }
+    .play { max-width:320px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="name">이재원</span>
+    <span class="tag">Portfolio</span>
+  </header>
+
+  <section class="intro">
+    <h1>슬라이딩 퍼즐 박스</h1>
+    <p>타일을 밀어 맞추는 퍼즐 박스. 타일 아래에 기계식 스위치를 넣어 누르는 손맛을 더했고, 설계부터 3D 프린팅과 조립까지 직접 진행했습니다.</p>
+  </section>
+
+  <dl class="meta">
+    <div><dt>분야</dt><dd>제품 설계</dd></div>
+    <div><dt>제작</dt><dd>3D 프린팅</dd></div>
+    <div><dt>구성</dt><dd>타일 4 + 1 · 기계식 스위치 · 하우징</dd></div>
+  </dl>
+
+  <figure class="hero">
+    <img src="assets/photo.jpg" alt="완성된 슬라이딩 퍼즐 박스" width="1200" height="900">
+    <figcaption><b>01</b><span>완성품</span></figcaption>
+  </figure>
+
+  <div class="row">
+    <figure class="cad">
+      <video src="assets/cad.mp4" poster="assets/cad.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <figcaption><b>02</b><span>설계 및 조립 구조</span></figcaption>
+    </figure>
+    <figure class="play">
+      <video src="assets/play.mp4" poster="assets/play.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <figcaption><b>03</b><span>작동 영상</span></figcaption>
+    </figure>
+  </div>
+
+  <footer>
+    <span>© 2026 이재원</span>
+    <span>Portfolio</span>
+  </footer>
+</div>
+</body>
+</html>
